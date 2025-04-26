@@ -14,6 +14,9 @@ const nextConfig = {
     };
     return config;
   },
+  experimental: {
+    appDir: true,
+  },
   async headers() {
     return [
       {
