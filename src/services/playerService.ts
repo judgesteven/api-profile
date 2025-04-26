@@ -15,7 +15,7 @@ interface TeamData {
 }
 
 export async function getPlayer(): Promise<Player> {
-  console.log('Fetching player data from:', `${API_CONFIG.baseUrl}/players/${API_CONFIG.playerId}?account=${API_CONFIG.account}`);
+  console.log('Fetching player data from:', `${API_CONFIG.baseUrl}/accounts/${API_CONFIG.account}/players/${API_CONFIG.playerId}`);
   console.log('Headers:', {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
@@ -23,7 +23,7 @@ export async function getPlayer(): Promise<Player> {
   });
 
   const response = await fetch(
-    `${API_CONFIG.baseUrl}/players/${API_CONFIG.playerId}?account=${API_CONFIG.account}`,
+    `${API_CONFIG.baseUrl}/accounts/${API_CONFIG.account}/players/${API_CONFIG.playerId}`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export async function getTeam(teamId: string): Promise<TeamData> {
   console.log('Fetching team data for team ID:', teamId);
   
   const response = await fetch(
-    `${API_CONFIG.baseUrl}/teams/${teamId}?account=${API_CONFIG.account}`,
+    `${API_CONFIG.baseUrl}/accounts/${API_CONFIG.account}/teams/${teamId}`,
     {
       headers: {
         'Content-Type': 'application/json',
