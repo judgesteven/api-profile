@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://api-profile-l9jtypmg8-stevens-projects-dc2c3532.vercel.app/sitemap.xml 
